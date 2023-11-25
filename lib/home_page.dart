@@ -1,3 +1,6 @@
+import 'package:flutter/material.dart';
+import 'package:primeiro/common/app_images.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
   @override
@@ -14,17 +17,24 @@ class _HomePageState extends State<HomePage> {
         title: Text("HomePage"),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Victor não esteve aqui',
-            ),
-            Text(
-              'aaaa',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              const Text(
+                'Victor não esteve aqui',
+              ),
+              Image.asset(AppImages.tesoura),
+              Image.asset(AppImages.papel),
+              Image.asset(AppImages.pedra),
+              Image.asset(AppImages.logo),
+              Text(
+                'aaaa',
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
